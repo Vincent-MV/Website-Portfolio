@@ -12,8 +12,9 @@ import Logo from './Logo'
 const Home  = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate')
-    const nameArray = ['i','n','c','e','n','t',',',' ']
-    const jobArray = ['S', 'o', 'f', 't', 'w', 'a', 'r', 'e', ' ','E', 'n', 'g', 'i', 'n','e', 'e', 'r']
+    const nameArray = "incent, ".split("");
+    const jobArray = "software engineer.".split("");
+    // const jobArray = ['S', 'o', 'f', 't', 'w', 'a', 'r', 'e', ' ','E', 'n', 'g', 'i', 'n','e', 'e', 'r']
     //const jobArray = ['S', 'o', 'f', 't', 'w', 'a', 'r', 'e', ' ','E', 'n', 'g', 'i', 'n','e', 'e', 'r']
 
     useEffect (() => {
@@ -26,7 +27,9 @@ const Home  = () => {
     return (
         <>
         <div className="container home-page">
+
             <div className="text-area">
+            
                 <h1>
                     <span className={letterClass}>H</span>
                     <span className={`${letterClass} _12`}>i,</span>
@@ -48,9 +51,9 @@ const Home  = () => {
                     />
                 </h1>
                 <h2 >Frontend developer / Youtuber</h2>
-                <Link to="/contact" className='flat-button'>Contact me</Link>
+                <Link to="/contact" className='flat-button'>CONTACT ME</Link>
             </div>
-            <Logo />
+            <Logo className="Home"/>
         </div>
         <Loader type="pacman"/>
     </>

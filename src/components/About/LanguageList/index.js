@@ -1,7 +1,6 @@
 import React from 'react'
-import './index.scss'
 
-const Portfolio = () => {
+const LanguageList = () => {
   return (
     <div>
       
@@ -9,4 +8,4 @@ const Portfolio = () => {
   )
 }
 
-export default Portfolio
+export default LanguageList

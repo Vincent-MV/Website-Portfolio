@@ -14,6 +14,25 @@
         margin: 0;
         font-family: 'Coolvetica';
         font-weight: 400;
+
+         &::before { 
+            color: #ffd700; 
+            font-size: 18px; 
+            position: absolute; 
+            margin-top: -40px; 
+            left: 15px; 
+            opacity: 0.6; 
+        }
+
+        &::after { 
+            color: #ffd700; 
+            font-size: 18px; 
+            position: absolute; 
+            margin-top: 18px; 
+            left: 20px; 
+            animation: fadeIn 1s 1.7s backwards; 
+            opacity: 0.6; 
+        }
         img {
             width: 52px;
             margin-left: 20px;
@@ -23,13 +42,14 @@
             animation-delay: 1.4s;
         }
     }
+
     h2{
         color: #8d8d8d ;
         margin-top: 20px;
         letter-spacing: 3px;
         font-size: 17px;
         font-family: sans-serif;
-        font-weight: 400;
+        font-weight: 800;
         animation: fadeIn 1s 1.8s backwards;
         margin-bottom: 20px;
     }
@@ -37,7 +57,7 @@
     .flat-button{
         color: #ffd708;
         letter-spacing: 3px;
-        font-weight: 400;
+        font-weight: 800;
         font-family: sans-serif;
         text-decoration: none;
         font-size: 17px;
@@ -51,6 +71,59 @@
         &:hover{
             background: #ffd708;
             color: #8d8d8d;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .home-page{
+        .logo-container{
+            width: 400px;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px){
+    
+    .home-page{
+        h1{
+            font-size: 40px; 
+            justify-content: center;
+        }
+        .text-zone{
+            position: initial;
+            width: 100%; 
+            transform: none;
+            padding: 10px;
+            box-sizing: border-box;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .logo-container {
+            position: relative; 
+            width: 250px;
+            height: auto; 
+            top: 50px; 
+            right: 0; 
+            box-sizing: border-box; 
+            margin: auto; 
+            left: 0; 
+
+            svg{
+                position: absolute; 
+                top: auto; 
+                right: auto; 
+                bottom: auto; 
+                left: 0;
+                margin: auto;
+            }
+        }
+
+        .flat-button{
+            float: none;
+            display: block;
+            width: 125px;
         }
     }
 }
