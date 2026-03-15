@@ -3,7 +3,8 @@ import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 import { useState, useEffect } from 'react';
 import { Loader } from 'react-loaders';
-import { faAngular, faCss3,  faGitAlt, faHtml5, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons';
+import { faAngular, faCss3,  faGitAlt, faHtml5, faJava, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons';
+import LanguageList from './LanguageList';
 
 
  const About = () => {
@@ -31,14 +32,14 @@ import { faAngular, faCss3,  faGitAlt, faHtml5, faJsSquare, faReact } from '@for
                     <p>
                         I am an aspiring front-end developer with a strong foundation in communication, problem-solving, and collaboration. My unique background has equipped me with the analytical mindset and growing technical skills needed to create user-focused, visually appealing, and functional web interfaces while thriving in a team environment.
                         <br/>
-                        
+                        <LanguageList/>
                     </p>
                 </div>
 
                 <div className='stage-cube-cont'> 
                     <div className='cube-spinner'>
                         <div className='face1'>
-                        <FontAwesomeIcon icon={faAngular} color="#DD0031"/>
+                        <FontAwesomeIcon icon={faJava} color="#DD0031"/>
                         </div>
 
                         <div className='face2'>
