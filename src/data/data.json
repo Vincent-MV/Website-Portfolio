@@ -1,7 +1,7 @@
 {
     "portfolio": [
         {
-            "cover": "../images/numerology.jpg",
+            "cover": "/portfolio/numerology.jpg",
             "title": "Numerology App",
             "description": "ReactJS",
             "url" : "https://github.com/Vincent-MV"

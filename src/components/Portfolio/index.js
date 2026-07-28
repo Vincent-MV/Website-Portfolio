@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import './index.scss'
 import AnimatedLetters from "../AnimatedLetters"
 import Loader from "react-loaders" 
-import portfolio from '../../assets/data/data.json'
+import portfolio from '../../data/data.json'
+
 
 const Portfolio = () => {
 
@@ -26,7 +27,11 @@ const Portfolio = () => {
                 return(
                   <div key={idx} className="image-box">
                         <img src={port.cover} alt="portfolio" className="portfolio-image"/>
-
+                        <div className="content">
+                          <p className="title">{port.title}</p>
+                          <h4 className="description">{port.description}</h4>
+                          <button className="btn" onClick={() => window.open(port.url)}>View</button>
+                        </div>
                   </div>  
                 )
               })
@@ -38,7 +43,7 @@ const Portfolio = () => {
     <>
       <div className="container portfolio-page">
             <h1 className="page-title">
-              <AnimatedLetters letterClass={letterClass} strArray={"Portfolio".split("")} idx={15}/>
+              <AnimatedLetters letterClass={letterClass} strArray={"PORTFOLIO".split("")} idx={15}/>
             </h1>
             <div>{renderPortfolio(portfolio.portfolio)}</div>
       </div>
