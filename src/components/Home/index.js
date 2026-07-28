@@ -13,9 +13,7 @@ const Home  = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate')
     const nameArray = "incent, ".split("");
-    const jobArray = "software engineer.".split("");
-    // const jobArray = ['S', 'o', 'f', 't', 'w', 'a', 'r', 'e', ' ','E', 'n', 'g', 'i', 'n','e', 'e', 'r']
-    //const jobArray = ['S', 'o', 'f', 't', 'w', 'a', 'r', 'e', ' ','E', 'n', 'g', 'i', 'n','e', 'e', 'r']
+    const jobArray = "software developer.".split("");
 
     useEffect (() => {
         const timer = setTimeout (() => {
@@ -50,7 +48,7 @@ const Home  = () => {
                     idx={22}
                     />
                 </h1>
-                <h2 >Frontend developer / Youtuber</h2>
+                <h2>Information Technology at Bicol Universiy</h2>
                 <Link to="/contact" className='flat-button'>CONTACT ME</Link>
             </div>
             <Logo className="Home"/>
