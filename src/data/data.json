@@ -5,6 +5,12 @@
             "title": "Numerology App",
             "description": "ReactJS",
             "url" : "https://github.com/Vincent-MV"
+        },
+        {
+            "cover": "/portfolio/workplace-img.png",
+            "title": "Workplace App",
+            "description": "NextJS",
+            "url" : "https://workplace-app-puce.vercel.app/dashboard"
         }
     ]
 }
