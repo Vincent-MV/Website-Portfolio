@@ -1,4 +1,3 @@
-// import logo from './logo.svg'
 import './App.scss';
 import { Routes, Route } from 'react-router-dom'; 
 import Layout from './components/Layout';
@@ -19,8 +18,6 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="portfolio" element={<Portfolio/>}/>
-        {/* <Route path="portfolio" element={<Portfolio />} />
-        <Route path="work" element={<Work />} /> */}
       
       </Route>
     </Routes> 
