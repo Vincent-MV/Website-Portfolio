@@ -1,12 +1,10 @@
 import logoTitle from '../../assets/images/logo-v.png'
-import { Link } from 'react-router-dom' // need to import
+import { Link } from 'react-router-dom' 
 import AnimatedLetters from '../AnimatedLetters'
 import {useEffect, useState} from 'react'
 import './index.scss'
 import {Loader} from 'react-loaders'
 import Logo from './Logo'
-// import loader from 'react-loaders'
-
 
 
 const Home  = () => {
