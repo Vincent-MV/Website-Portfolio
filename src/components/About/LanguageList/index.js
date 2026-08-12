@@ -2,7 +2,6 @@ import React , {useState} from 'react'
 import './index.scss'
 import ProgressBar from '../ProgressBar'
 
-
 const LanguageList = () => {
 
   const [languages] = useState(
