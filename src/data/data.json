@@ -10,7 +10,7 @@
             "cover": "/portfolio/workplace-img.png",
             "title": "Workplace App",
             "description": "NextJS",
-            "url" : "https://workplace-app-puce.vercel.app/dashboard"
+            "url" : "https://workplace-app-puce.vercel.app/"
         }
     ]
 }

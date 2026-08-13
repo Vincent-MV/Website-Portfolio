@@ -8,6 +8,7 @@ import emailjs from '@emailjs/browser'
 const Contact = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate')
+     const [isLoading, setIsLoading] = useState(false) 
     const refForm = useRef()
 
     useEffect (() => {
@@ -20,20 +21,28 @@ const Contact = () => {
         const sendEmail = (e) => {
             e.preventDefault()
 
+            setIsLoading(true) 
+            
             emailjs
             .sendForm(
-                'service_xsrcfxr',
-                'template_hjwtvd3',
+                process.env.REACT_APP_EMAILJS_SERVICE_ID,
+                process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
                 refForm.current,
-                'HVZJmhZO1okETc3TC'
+                {
+                    publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+                }
             )
             .then(
-                () => {
+                (response) => {
+                     console.log('SUCCESS!', response.status, response.text);
                     alert('Message sent successfully')
-                    window.location.reload(false)
+                    refForm.current.reset();
+                    setIsLoading(false);
                 },
-                () => {
+                (err) => {
+                    console.log('FAILED...', err); 
                     alert('Failed to send message, please try again')
+                    setIsLoading(false);
                 }
             )
         }
@@ -74,7 +83,11 @@ const Contact = () => {
                                 </li>
 
                                 <li>
-                                    <input type='submit' name='subject'className='flat-button' value="SEND" />
+                                    <input 
+                                      type='submit'
+                                      className='flat-button'
+                                      value={isLoading ? 'SENDING...' : 'SEND'} 
+                                      value="SEND" />
                                 </li>
 
                             </ul>
