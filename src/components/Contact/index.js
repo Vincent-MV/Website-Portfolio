@@ -87,7 +87,8 @@ const Contact = () => {
                                       type='submit'
                                       className='flat-button'
                                       value={isLoading ? 'SENDING...' : 'SEND'} 
-                                      value="SEND" />
+                                      disabled={isLoading} 
+                                      />
                                 </li>
 
                             </ul>
